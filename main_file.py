@@ -12,9 +12,9 @@ detFile.close()
 data = pd.read_csv(details['fileName'])
 
 data['rsi14'] = ta.func.RSI(data.close, 14)
-data['macd1'] = ta.func.MACD(data.close, 5)[0]
-data['macd2'] = ta.func.MACD(data.close, 5)[1]
-data['macd3'] = ta.func.MACD(data.close, 5)[2]
+data['macd1'] = ta.func.MACD(data.close, fastperiod=12, slowperiod=26, signalperiod=9)[0]
+data['macd2'] = ta.func.MACD(data.close, fastperiod=12, slowperiod=26, signalperiod=9)[1]
+data['macd3'] = ta.func.MACD(data.close, fastperiod=12, slowperiod=26, signalperiod=9)[2]
 obv = ta.func.OBV(data.close, data.volume)
 data['obv'] = obv
 data['smaObv'] = customFuncs.smoothObv(obv)
@@ -55,10 +55,12 @@ for i in range(len(data)):
             result.append(False)
 
 toW = '\n'.join(tDateTime)
-wfile = open('resultFile.txt','w')
+wfile = open(details['outputFileName'],'w')
 wfile.write(toW)
 wfile.close()
 
 data['result'] = result
-data.to_csv('dataDumpFile.csv')
+data.to_csv(details['dataDumpFileName'])
+
+customFuncs.divergence(details['dataDumpFileName'])
 

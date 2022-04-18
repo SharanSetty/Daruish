@@ -1,1 +1,8 @@
-{"fileName":"./files/BTCUSD1.csv", "trend":"Bull", "BearConditionals":{"rsi":70, "wave":60}, "BullConditionals":{"rsi":30, "wave":-60}}
+{
+		"fileName":"./files/fourHourData.csv",
+		"trend":"Bear",
+		"BearConditionals":{"rsi":70, "wave":60},
+		"BullConditionals":{"rsi":30, "wave":-60},
+		"outputFileName":"./outputFiles/resultFile.csv",
+		"dataDumpFileName":"./outputFiles/dataDumpFile.csv"
+}
