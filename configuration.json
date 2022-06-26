@@ -1,0 +1,17 @@
+{
+	"assetPair":"BTCUSD1",
+	"higherTimeframe":"4H",
+	"lowerTimeframe":"5min",
+	"parameters":
+	{
+		"Bearish":
+		{
+			"RSI":60,"WTWS":60
+		},
+		"Bullish":
+		{
+			"RSI":40,"WTWS":-60
+		},
+		"RiskRewardRatio": "1:4"
+	}
+}
