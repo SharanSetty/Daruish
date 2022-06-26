@@ -1,8 +1,0 @@
-{
-		"fileName":"./files/fourHourData.csv",
-		"trend":"Bear",
-		"BearConditionals":{"rsi":70, "wave":60},
-		"BullConditionals":{"rsi":30, "wave":-60},
-		"outputFileName":"./outputFiles/resultFile.csv",
-		"dataDumpFileName":"./outputFiles/dataDumpFile.csv"
-}
